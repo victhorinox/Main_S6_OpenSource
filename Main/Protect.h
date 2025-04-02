@@ -1,0 +1,214 @@
+// Protect.h: interface for the CProtect class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#pragma once
+
+#include "CustomBuyVip.h"
+#include "CustomCommandInfo.h"
+#include "CustomEventTime.h"
+#include "CustomFog.h"
+#include "CustomGloves.h"
+#include "CustomItem.h"
+#include "CustomItemDescription.h"
+#include "CustomJewel.h"
+#include "CustomMessage.h"
+#include "CustomMonster.h"
+#include "CustomNpcName.h"
+#include "CustomWing.h"
+#include "ItemSmoke.h"
+#include "StaticEffect.h"
+#include "DynamicEffect.h"
+#include "CustomBow.h"
+#include "CustomCloak.h"
+#include "CustomPet.h"
+#include "CustomMonsterGlow.h"
+#include "CustomPetEffect.h"
+#include "CustomPetGlow.h"
+#include "CustomItemPower.h"
+#include "CustomMonsterEffect.h"
+#include "CustomItemTooltip.h"
+#include "CustomItemDisableGlow.h"
+
+struct MAIN_FILE_INFO
+{
+	BYTE LauncherType; 
+	char LauncherName[32];
+	char CustomerName[32];
+	char IpAddress[32];
+	WORD IpAddressPort;
+	char ClientVersion[8];
+	char ClientSerial[17];
+	char WindowName[32];
+	char ScreenShotPath[50];
+	char ClientName[32];
+	char PluginName1[32];
+	char PluginName2[32];
+	char PluginName3[32];
+	char PluginName4[32];
+	char PluginName5[32];
+	char CameraName[32];
+	DWORD ClientCRC32;
+	DWORD Plugin1CRC32;
+	DWORD Plugin2CRC32;
+	DWORD Plugin3CRC32;
+	DWORD Plugin4CRC32;
+	DWORD Plugin5CRC32;
+	DWORD CameraCRC32;
+	DWORD HelperActiveAlert;
+	DWORD HelperActiveLevel;
+	DWORD DWMaxAttackSpeed;
+	DWORD DKMaxAttackSpeed;
+	DWORD FEMaxAttackSpeed;
+	DWORD MGMaxAttackSpeed;
+	DWORD DLMaxAttackSpeed;
+	DWORD SUMaxAttackSpeed;
+	DWORD RFMaxAttackSpeed;
+	DWORD ReconnectTime;
+	WORD RemoveClass;
+	WORD RankUserType;
+	WORD DisableTree; 
+	WORD CsSkill; 
+	WORD DisableReflectEffect;
+	WORD EnableVipShop;
+	WORD VipTypes;
+	WORD PrintLogo;
+	WORD CustomMenuSwitch;
+	WORD CustomMenuType;
+	WORD EnableEventTimeButton;
+	WORD EnableVipShopButton;
+	WORD EnableRankingButton;
+	WORD EnableCommandButton;
+	WORD EnableOptionButton;
+	WORD EnableJewelBankButton;
+	WORD EnableCoinStatus;
+	WORD EnableShopValueSystem;
+	WORD CustomStoreEnableJoB;
+	WORD CustomStoreEnableJoS;
+	WORD CustomStoreEnableJoC;
+	WORD CustomStoreEnableCoin1;
+	WORD CustomStoreEnableCoin2;
+	WORD CustomStoreEnableCoin3;
+	WORD CustomOffStoreEnable;
+	WORD CustomMonsterEnable;
+	WORD DisablePartyHpBar;
+	WORD RankUserShowOverHead;
+	WORD RankUserOnlyOnSafeZone;
+	WORD RankUserShowReset;
+	WORD RankUserShowMasterReset;
+	WORD RankUserNeedAltKey;
+	WORD CustomGlovesEnable;
+	WORD CustomInterfaceType;
+	WORD CustomInterfaceHelperBar;
+	WORD PingTest;
+	WORD EnableCustomBow;
+	WORD CustomCloakEnable;
+	WORD CustomPetEnable;
+	WORD DisableMoveList;
+	WORD DisableSet15Effect;
+	WORD FpsLimitEnable;
+	WORD LimitFPS;
+	WORD CustomAdvancedStausEnable;
+	WORD CustomJewelBankEnable;
+	WORD CustomAncientSwitch;
+	WORD AllowHelperInventory;
+	WORD DisableCashShop;
+	WORD DisableMasterSkillTree;
+	WORD DisableCommandWindow;
+	WORD CustomMiniMapType;
+	WORD DisableQuest;
+	WORD DisablePet;
+	WORD DisableGens;
+	WORD DisableFriend;
+	WORD DisableExpandedInventory;
+	WORD DisableExpandedWarehouse;
+	WORD DisablePersonalShop;
+	WORD CharacterDeleteMaxLevel;
+	WORD DisableMasterEvents;
+	WORD DisableClickEffect;
+	WORD DisableSetItemOption;
+	WORD DisableSocketItemOption;
+	WORD Disable380ItemOption;
+	WORD DisableBattleZone;
+	WORD MonsterLifeBarType;
+	WORD GMT_TIME;
+	WORD CustomServerNameEnable;
+	WORD CustomClientIconType;
+	WORD SCAnimation;
+	WORD SCSlot1Animation;
+	WORD SCSlot2Animation;
+	WORD SCSlot3Animation;
+	WORD SCSlot4Animation;
+	WORD SCSlot5Animation;
+	char ServerNameA[32];
+	char ServerNameB[32];
+	char ServerNameC[32];
+	char ServerNameD[32];
+	WORD RemoveMuErrorLog;
+	WORD SelectLoginThemeType;
+	WORD SelectCharacterType;
+	WORD SelectCharacterTurnAround;
+	WORD SelectCharacterTurnAroundSpeed;
+	WORD CustomBloodCastleWindow;
+	WORD EnableItemNameColor;
+	WORD MaxGameInstances;
+	WORD SocketItemAcceptHarmony;
+	WORD ImgsMapNameType;
+	WORD BuffIconType;
+	WORD NameStyle;
+	WORD ServerNews;
+	WORD CustomMainWindow;
+	WORD SkillTreeType; 
+	CUSTOM_MESSAGE_INFO EngCustomMessageInfo[MAX_CUSTOM_MESSAGE];
+	CUSTOM_MESSAGE_INFO PorCustomMessageInfo[MAX_CUSTOM_MESSAGE];
+	CUSTOM_MESSAGE_INFO SpnCustomMessageInfo[MAX_CUSTOM_MESSAGE];
+	CUSTOM_JEWEL_INFO CustomJewelInfo[MAX_CUSTOM_JEWEL];
+	CUSTOM_WING_INFO CustomWingInfo[MAX_CUSTOM_WING];
+	CUSTOM_ITEM_INFO CustomItemInfo[MAX_CUSTOM_ITEM];
+	CUSTOM_WING_EFFECT_INFO CustomWingEffectInfo[MAX_CUSTOM_WING_EFFECT];
+	DYNAMIC_WING_EFFECT_INFO DynamicWingEffectInfo[MAX_DYNAMIC_WING_EFFECT];
+	CUSTOM_BUYVIP_INFO CustomBuyVipInfo[MAX_CUSTOM_BUYVIP];
+	CUSTOM_COMMAND_INFO CustomCommandInfo[MAX_CUSTOM_COMMAND];
+	CUSTOM_EVENT_INFO CustomEventInfo[MAX_EVENTTIME];
+	CUSTOM_DESCRIPTION_INFO CustomDescriptionInfo[MAX_CUSTOM_DESCRIPTION];
+	CUSTOM_SMOKEEFFECT CustomSmokeEffect[MAX_SMOKE_ITEMS];
+	CUSTOM_FOG CustomFog[MAX_FOG];
+	CUSTOMMONSTER_DATA CustomMonsters[MAX_CUSTOMMONSTER];
+	NPCNAME_DATA CustomNPCName[MAX_CUSTOM_NPCNAME];
+	CUSTOM_RF_GLOVES CustomGloves[MAX_CUSTOM_GLOVES];
+	CUSTOM_BOW_INFO CustomBowInfo[MAX_CUSTOM_BOW];
+	CUSTOM_PET_INFO CustomPetInfo[MAX_PET_ITEM];
+	CUSTOMCLOAK_DATA CustomCloakInfo [MAX_CUSTOMCLOAK];
+	CUSTOM_MONSTERGLOW_INFO m_CustomMonsterGlow[MAX_CUSTOM_MONSTERGLOW];
+	CUSTOM_GLOW_INFO m_CustomMonsterbrightness[MAX_CUSTOM_MONSTERGLOW];
+	xMonsterEffect m_CustomMonsterEffect[MAX_EFFECT_MONSTER];
+	PET_EFFECT_CUSTOM m_PetCEffectBMD[max_ceffect];
+	RENDER_MESH RenderMeshPet[MAX_RENDER_MESH];
+	CUSTOM_ITEM_INFO_EX m_CustomItemInfo_Ex[MAX_CUSTOM_ITEM_INFO];
+	nInformation m_TRSTooltipData[MaxLine];
+	nText m_TRSTooltipText[MaxLine];
+	JCItemnoGlow m_JCWRemoveGlow[MAX_NOGLOW];
+};
+
+class CProtect
+{
+public:
+	CProtect();
+	virtual ~CProtect();
+	bool ReadMainFile(char* name);
+	void CheckLauncher();
+	void CheckInstance();
+	void CheckClientFile();
+	void CheckPlugin1File();
+	void CheckPlugin2File();
+	void CheckPlugin3File();
+	void CheckPlugin4File();
+	void CheckPlugin5File();
+	void CheckCameraFile();
+	bool IsProcessRunning(const char *ProcessName, int maxProcess);
+public:
+	MAIN_FILE_INFO m_MainInfo;
+	DWORD m_ClientFileCRC;
+};
+
+extern CProtect gProtect;
